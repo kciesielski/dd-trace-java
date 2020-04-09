@@ -52,6 +52,16 @@ public class SimpleScope implements DDScope {
   }
 
   @Override
+  public boolean isAsyncPropagating() {
+    return false;
+  }
+
+  @Override
+  public Continuation capture() {
+    return null;
+  }
+
+  @Override
   public void setAsyncPropagation(final boolean value) {
     // do nothing
   }
