@@ -184,6 +184,7 @@ public class AgentTracer {
 
     @Override
     public boolean isSameTrace(final AgentSpan otherSpan) {
+      // FIXME [API] AgentSpan or AgentSpan.Context should have a "getTraceId()" type method
       // Not sure if this is the best idea...
       return otherSpan instanceof NoopAgentSpan;
     }
